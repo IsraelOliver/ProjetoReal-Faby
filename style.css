@@ -19,7 +19,7 @@ body {
 }
 
 #home {
-   min-height: 0;
+  min-height: 0;
   display: flex;
   align-items: center;
 }
@@ -72,6 +72,31 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 11em;
+}
+
+.conteudo-texto {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.conteudo-titulo {
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.titulo-destaque {
+  color: #b4823a;
+}
+
+.linha-titulo {
+  margin: 15px 0;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.conteudo-subtitulo {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .foto-faby {
