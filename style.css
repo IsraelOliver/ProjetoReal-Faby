@@ -70,9 +70,10 @@ body {
 .conteudo {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  gap: 50px;
+  justify-content: space-between;
   align-items: center;
-  padding: 11em;
+  padding: 0 11em;
 }
 
 .conteudo-texto {
@@ -96,6 +97,50 @@ body {
 
 .conteudo-subtitulo {
   font-size: 20px;
+  font-weight: bold;
+}
+
+.conteudo-botoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 15px 0;
+  width: 45%;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.button i {
+  padding-right: 10px;
+  font-size: 25px;
+}
+
+#btn-whatsapp {
+  border: 2px solid #b4823a;
+  background-color: #b4823a;
+}
+
+#btn-consultoria {
+  border: 2px solid #fff;
+}
+
+.conteudo-selos {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.selos {
+  border-radius: 15px;
+  background-color: #fff;
+  color: #102337;
+  padding: 5px 20px;
   font-weight: bold;
 }
 
