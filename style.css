@@ -1,55 +1,63 @@
+/* FOTNES IMPORATDAS */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/* Reset */
+/* VARIAVEIS */
+
+:root {
+  /* cor */
+  --cor-primaria: #0e1e58;
+  --cor-secundaria: #b4823a;
+  --cor-branco: #f9f5f5;
+  --cor-detalhe: #87143d;
+
+  /* fontes */
+  --fonte-titulo: 'Poppins', sans-serif;
+  --font-texto: 'Lato', sans-serif;
+}
+
+/* RESET */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
-  background: linear-gradient(90deg,rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
-  display: grid;
-  grid-template-rows: auto 1fr;
-}
-
-#home {
-  min-height: 0;
-  display: flex;
-  align-items: center;
+  background: linear-gradient(90deg, rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
+  min-height: 100vh;
+  display: block;
 }
 
 /* HEADER */
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 9999;
+  background: linear-gradient(90deg, rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
 }
 
 .header-conteudo {
   display: flex;
   justify-content: space-around;
-  color: #fff;
+  color: var(--cor-branco);
   align-items: center;
   gap: 20em;
-  background: linear-gradient(90deg,rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
 }
 
 .link-text {
   text-decoration: none;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
+  color: var(--cor-branco);
+  font-family: var(--fonte-titulo);
   font-size: 15px;
   margin-left: 15px;
 }
 
 #link-text-contato {
-  border: 2px solid #b4823a;
+  border: 2px solid var(--cor-secundaria);
   padding: 5px 15px;
   border-radius: 10px;
 }
@@ -60,34 +68,30 @@ body {
 }
 
 .linha {
-  width: 95%;
+  width: 100%;
   margin: auto;
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* HOME */
+/* CLASSES COMUNS */
 
 .conteudo {
   width: 100%;
   display: flex;
   gap: 50px;
-  justify-content: space-between;
   align-items: center;
   padding: 0 11em;
 }
 
 .conteudo-texto {
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
+  font-family: var(--font-texto);
+  color: var(--cor-branco);
 }
 
 .conteudo-titulo {
+  font-family: var(--fonte-titulo);
   font-size: 50px;
   font-weight: 500;
-}
-
-.titulo-destaque {
-  color: #b4823a;
 }
 
 .linha-titulo {
@@ -95,14 +99,18 @@ body {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.conteudo-subtitulo {
-  font-size: 20px;
-  font-weight: bold;
+.conteudo-selos {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 2em;
 }
 
 .conteudo-botoes {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .button {
@@ -113,7 +121,26 @@ body {
   align-items: center;
   text-align: center;
   margin: 20px 0;
-  color: #fff;
+  color: var(--cor-branco);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* HOME */
+
+#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-destaque {
+  color: var(--cor-secundaria);
+}
+
+.conteudo-subtitulo {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .button i {
@@ -122,28 +149,219 @@ body {
 }
 
 #btn-whatsapp {
-  border: 2px solid #b4823a;
-  background-color: #b4823a;
+  border: 2px solid var(--cor-secundaria);
+  background-color: var(--cor-secundaria);
+  transition: .2s;
+}
+
+#btn-whatsapp:hover {
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-branco);
+  background-color: var(--cor-branco);
 }
 
 #btn-consultoria {
-  border: 2px solid #fff;
+  border: 2px solid var(--cor-branco);
+  transition: .2s;
 }
 
-.conteudo-selos {
-  display: flex;
-  justify-content: flex-start;
-  gap: 20px;
+#btn-consultoria:hover {
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-branco);
+  background-color: var(--cor-branco);
 }
 
-.selos {
+.selos-home {
   border-radius: 15px;
-  background-color: #fff;
-  color: #102337;
+  background-color: var(--cor-branco);
+  color: var(--cor-detalhe);
   padding: 5px 20px;
   font-weight: bold;
 }
 
 .foto-faby {
   width: 25%;
+}
+
+/* SERVIÇOS*/
+
+#servicos {
+  height: 100vh;
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria);
+}
+
+.conteudo-servicos {
+  padding: 7em 11em;
+}
+
+.container-servicos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-servicos hr {
+  margin-top: 10px;
+  width: 55%;
+  border: 1px solid var(--cor-primaria);
+}
+
+.conteudo-servicos h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.conteudo-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-texto);
+  padding-left: 20px;
+}
+
+.conteudo-info p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.conteudo-info i {
+  padding-right: 10px;
+  font-size: 20px;
+  color: var(--cor-secundaria);
+}
+
+.conteudo-info a {
+  text-decoration: none;
+  color: var(--cor-primaria);
+  font-weight: bold;
+  background-color: var(--cor-secundaria);
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 30px;
+}
+
+.info-check {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo-cards {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 11em;
+}
+
+.cards {
+  width: 400px;
+  height: 200px;
+  background-color: var(--cor-branco);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid #dadbdd;
+  box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* CONTATO */
+
+#contato {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-texto);
+}
+
+.contato-subtitulo {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+
+.selos-contato {
+  border-radius: 10px;
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria);
+  padding: 8px 15px;
+  font-size: 20px;
+}
+
+.selos-contato i {
+  color: var(--cor-detalhe);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+#btn-whatsapp_contato {
+  width: 55%;
+  padding: 15px 0;
+  background-color: var(--cor-secundaria);
+  transition: .2s;
+  margin: 0 auto;
+}
+
+#btn-whatsapp_contato:hover {
+  color: var(--cor-primaria);
+  background-color: var(--cor-branco);
+}
+
+.formulario {
+  background: var(--cor-branco);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  border-radius: 15px;
+  color: var(--cor-primaria);
+  width: 700px;
+  margin-left: 50px;
+}
+
+.formulario h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 30px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.form-group label {
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input, .form-group textarea {
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--cor-primaria);
+  outline: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-group button {
+  color: var(--cor-branco);
+  background-color: var(--cor-primaria);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 145px;
+  border-radius: 20px;
+  transition: .2s;
+  border: none;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: var(--cor-secundaria);
 }
