@@ -27,13 +27,13 @@
 <body>
 
   <header class="header">
-    <!-- <span class="menu-toggle"></span> Menu Mobile-->
     <div class="header-conteudo">
+      <!-- <span class="menu-toggle">☰</span> Menu Mobile-->
       <img class="img-logo" src="./src/FCV_logo.png" />
       <div class="header-links">
         <a class="link-text" href="#home">Início</a>
         <a class="link-text" href="#servicos">Serviços</a>
-        <a class="link-text" href="#">Depoimentos</a>
+        <a class="link-text" href="#depoimento">Depoimentos</a>
         <a class="link-text" href="#">Sobre</a>
         <a class="link-text" id="link-text-contato" href="#contato">Contato</a>
       </div>
@@ -47,8 +47,7 @@
 
         <div>
           <h1 class="conteudo-titulo">Transforme<span class="titulo-destaque"> seu negócio de saúde </span>com
-            estratégia,
-            método e presença.</h1>
+            estratégia, método e presença.</h1>
           <hr class="linha-titulo">
           <h2 class="conteudo-subtitulo">Consultoria voltada para líderes, gestores e empresas de saúde que buscam
             organização, clareza e resultados sustentáveis.</h2>
@@ -76,35 +75,35 @@
 
   <section id="servicos">
     <div class="conteudo-servicos">
-
-      <div class="container-servicos">
-        <h2>Esse método é para você que...</h2>
-        <hr>
-      </div>
-
-      <div class="conteudo-info">
-        <div class="info-check">
-          <p><i class="fa-solid fa-check"></i>Está enfrentando dificuldades na gestão da sua clínica ou consultório</p>
-          <p><i class="fa-solid fa-check"></i>Deseja aumentar sua lucratividade e organizar seus processos</p>
-          <p><i class="fa-solid fa-check"></i>Quer liderar sua equipe com mais segurança</p>
-          <p><i class="fa-solid fa-check"></i>Busca acelerar o crescimento do seu negócio</p>
+      <div class="servicos-texto">
+        <div class="servicos-titulo">
+          <h2>Esse método é para você que...</h2>
+          <hr>
         </div>
-        <a href="#">Quero saber por onde começar</a>
+
+        <div class="conteudo-info">
+          <div class="info-check">
+            <p><i class="fa-solid fa-check"></i>Está enfrentando dificuldades na gestão da sua clínica ou consultório</p>
+            <p><i class="fa-solid fa-check"></i>Deseja aumentar sua lucratividade e organizar seus processos</p>
+            <p><i class="fa-solid fa-check"></i>Quer liderar sua equipe com mais segurança</p>
+            <p><i class="fa-solid fa-check"></i>Busca acelerar o crescimento do seu negócio</p>
+          </div>
+          <a href="#">Quero saber por onde começar</a>
+        </div>
       </div>
 
-    </div>
-
-    <div class="conteudo-cards">
-      <div class="cards">Card 1</div>
-      <div class="cards">Card 2</div>
-      <div class="cards">Card 3</div>
+      <div class="conteudo-cards">
+        <div class="cards">Card 1</div>
+        <div class="cards">Card 2</div>
+        <div class="cards">Card 3</div>
+      </div>
     </div>
   </section>
 
   <section id="contato">
     <div class="conteudo">
-      <div class="conteudo-texto">
 
+      <div class="conteudo-texto">
         <div>
           <h1 class="conteudo-titulo">Mais do que consultoria.</h1>
           <h1 class="conteudo-titulo">Uma parceria estratégica.</h1>
@@ -121,37 +120,66 @@
         <div class="conteudo-botoes">
           <a href="#" class="button" id="btn-whatsapp_contato"><i class="fa-brands fa-whatsapp"></i>Falar com Fabiane no WhatsApp!</a>
         </div>
-
       </div>
       
       <form class="formulario" action="https://formsubmit.co/fcv.instituto@gmail.com" method="POST">
         <h2>Fale Comigo</h2>
 
-        <!-- CAMPO OCULTO PARA REDIRECIONAMENTO APÓS O ENVIO -->
         <input type="hidden" name="_next" value="https://fabianevaz.com.br/">
-
-        <!-- CAMPO OCULTO PARA ASSUNTO DO E-MAIL (Opcional, mas recomendado ) -->
         <input type="hidden" name="_subject" value="Nova Mensagem de Contato do Site">
 
         <div class="form-group">
           <label for="name">Nome</label>
           <input type="text" id="name" name="name" placeholder="Nome completo" required>
         </div>
-
         <div class="form-group">
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+          <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
         </div>
-
         <div class="form-group">
           <label for="message">Escreva sua dúvida</label>
           <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
         </div>
-
         <div class="form-group">
           <button type="submit">Enviar</button>
         </div>
       </form>
+
     </div>
   </section>
+
+  <section id="depoimento">
+    <div class="depoimento-conteudo">
+      <h1>Resultados que começam na organização</h1>
+
+      <div class="depoimento-card">
+        <div class="cards-xp">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Depoimento de exemplo.Texto entre duas e quatro linhas pequenas.</p>
+          <h2 class="depoimento-autor">— Marria teste</h2>
+          <p class="nota">★ ★ ★ ★ ★</p>
+        </div>
+        <div class="cards-xp">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Depoimento de exemplo.Texto entre duas e quatro linhas pequenas.</p>
+          <h2 class="depoimento-autor">— Marria teste</h2>
+          <p class="nota">★ ★ ★ ★ ★</p>
+        </div>
+        <div class="cards-xp">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Depoimento de exemplo.Texto entre duas e quatro linhas pequenas.</p>
+          <h2 class="depoimento-autor">— Marria teste</h2>
+          <p class="nota">★ ★ ★ ★ ★</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="footer">
+
+  </section>
+
+  <script src="script.js"></script>
 </body>
+</html>
