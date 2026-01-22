@@ -13,6 +13,7 @@
   --cor-detalhe: #87143d;
   --cor-degrade: linear-gradient(90deg, rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
   --cor-transparent: rgba(255, 255, 255, 0.5);
+  
 
   /* fontes */
   --fonte-titulo: 'Poppins', sans-serif;
@@ -28,24 +29,13 @@
   font-family: var(--font-texto);
 }
 
-.header-conteudo,
-.conteudo-home,
-.conteudo-servicos,
-.contato-conteudo,
-.ebook-conteudo,
-.depoimento-conteudo {
-  width: min(1450px, 100%);
-  margin-inline: auto;
-  padding-inline: clamp(16px, 4vw, 64px);
-  padding-top: 6em;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background: var(--cor-degrade);
+  min-height: 100vh;
 }
 
 /* HEADER */
@@ -61,8 +51,8 @@ body {
 .header-conteudo {
   display: flex;
   justify-content: space-between;
+  padding: 0 11em;
   align-items: center;
-  padding-top: 0;
 }
 
 .header-menu {
@@ -108,16 +98,17 @@ body {
 .linha {
   width: 100%;
   margin: auto;
-  border-color: var(--cor-transparent);
+  border-color: #dadbdd;
 }
 
 /* CLASSES COMUNS */
 
 .conteudo {
+  width: 100%;
   display: flex;
   gap: 50px;
   align-items: center;
-  justify-content: space-between;
+  padding: 0 11em;
 }
 
 .conteudo-texto {
@@ -132,7 +123,7 @@ body {
 
 .linha-titulo {
   margin: 15px 0;
-  border-color: var(--cor-transparent);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .conteudo-selos {
@@ -152,12 +143,13 @@ body {
 .button {
   text-decoration: none;
   border-radius: 15px;
-  padding: 10px 20px;
+  padding: 10px 15px;
+  align-items: center;
   text-align: center;
-  margin: 20px 0;
   color: var(--cor-branco);
   font-weight: bold;
   font-size: 1.2em;
+  margin: 30px 0;
 }
 
 /* HOME */
@@ -220,16 +212,19 @@ body {
 }
 
 .foto-faby {
-  width: min(380px, 35vw); /* trava tamanho em telas grandes e reduz em telas menores */
-  height: auto;
+  width: 25%;
 }
 
-/* SERVIÇOS */
+/* SERVIÇOS-CSS */
 
 #servicos {
   height: 100vh;
   background-color: var(--cor-branco);
   color: var(--cor-primaria);
+}
+
+.conteudo-servicos {
+  padding: 7em 11em;
 }
 
 .servicos-texto {
@@ -282,6 +277,12 @@ body {
   border-radius: 15px;
   padding: 10px 20px;
   font-size: 30px;
+  transition: .3s ease;
+}
+
+.conteudo-info a:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
 }
 
 .conteudo-cards {
@@ -314,7 +315,7 @@ body {
 .contato-subtitulo {
   font-size: 25px;
   font-weight: bold;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .selos-contato {
@@ -334,7 +335,7 @@ body {
 #btn-whatsapp_contato {
   background-color: var(--cor-secundaria);
   transition: .2s;
-  margin: 0 auto;
+  margin: 500px auto;
 }
 
 #btn-whatsapp_contato:hover {
@@ -407,6 +408,10 @@ body {
   height: 100vh;
   background-color: var(--cor-branco);
   color: var(--cor-primaria);
+}
+
+.depoimento-conteudo {
+  padding: 7em 11em;
 }
 
 .depoimento-conteudo h1 {
@@ -573,6 +578,7 @@ body {
 }
 
 /* SOBRE */
+
 #sobre {
   height: 100vh;
   background-color: var(--cor-branco);
@@ -611,10 +617,10 @@ body {
 }
 
 .footer-texto hr {
-  width: 700px;
+  width: 100%;
   border: 1px solid var(--cor-transparent);
   border-top: none;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .footer-texto p {
@@ -625,7 +631,7 @@ body {
   display: inline-flex;
   background-color: var(--cor-secundaria);
   transition: .2s;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 #btn-whatsapp_footer:hover {
@@ -740,6 +746,10 @@ body {
     height: auto;
   }
 
+  #home a {
+    width: auto;
+  }
+
   .conteudo {
     margin-top: 5em;
     margin-bottom: 2em;
@@ -761,7 +771,7 @@ body {
 
   .button {
     font-size: 18px;
-    padding: 10px 30px;
+    margin: 10px 0;
   }
 
   .foto-faby {
@@ -814,6 +824,10 @@ body {
     margin-bottom: 30px;
   }
 
+  .servicos-texto {
+    margin-bottom: 1em;
+  }
+
   .conteudo-cards {
     flex-wrap: wrap;
   }
@@ -828,6 +842,10 @@ body {
     height: auto;
   }
 
+  #contato h1 {
+    font-size: 25px;
+  }
+  
   .conteudo-botoes {
     flex-direction: column;
   }
@@ -891,5 +909,39 @@ body {
   }
 
   /* FOOTER-MOBILE */
+
+  .footer-conteudo {
+    flex-direction: column;
+  }
+
+  .footer-midia h2 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .redes-sociais {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .redes-sociais i {
+    font-size: 25px;
+  }
+
+  .redes-sociais a {
+    font-size: 20px;
+  }
+
+  .linha-footer {
+    width: 90%;
+  }
   
+  .autorais {
+    padding: 0 30px;
+  }
 }
