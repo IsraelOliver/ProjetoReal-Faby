@@ -107,6 +107,7 @@ body {
   width: 100%;
   display: flex;
   gap: 50px;
+  justify-content: space-between;
   align-items: center;
   padding: 0 11em;
 }
@@ -148,7 +149,6 @@ body {
   color: var(--cor-branco);
   font-weight: bold;
   font-size: 1.2em;
-  margin: 30px 0;
 }
 
 /* HOME */
@@ -183,12 +183,14 @@ body {
   border: 2px solid var(--cor-secundaria);
   background-color: var(--cor-secundaria);
   transition: .2s;
+  margin: 20px 0;
 }
 
 #btn-whatsapp:hover {
   color: var(--cor-primaria);
   border: 2px solid var(--cor-branco);
   background-color: var(--cor-branco);
+  margin: 20px 0;
 }
 
 #btn-consultoria {
@@ -582,10 +584,23 @@ body {
 /* SOBRE-CSS */
 
 #sobre {
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--cor-branco);
   color: var(--cor-primaria);
   padding: 7em 4em;
+}
+
+/* layout geral do sobre */
+
+.conteudo-sobre {
+  display: flex;
+}
+
+/* bloco esquerdo do sobre */
+
+.bloco1-sobre {
+  width: 50%;
+  padding: 30px;
 }
 
 /* títulos do sobre */
@@ -626,13 +641,7 @@ body {
   border-radius: 15px;
   padding: 10px 20px;
   font-size: 20px;
-  margin-top: 30px;
-}
-
-/* layout geral do sobre */
-
-.conteudo-sobre {
-  display: flex;
+  margin: 30px auto;
 }
 
 /* linha divisória entre os blocos do sobre */
@@ -640,13 +649,6 @@ body {
 .linha-sobre {
   border-left: 1px solid #dadbdd;
   margin: 0 auto;
-}
-
-/* bloco esquerdo do sobre */
-
-.bloco1-sobre {
-  width: 50%;
-  margin-right: 2em;
 }
 
 /* bloco direito do sobre */
@@ -680,7 +682,8 @@ body {
 .tracejado {
   border: 1px solid rgba(180, 130, 58, 0.2);
   border-radius: 15px;
-  padding: 25px 25px 0 25px;
+  padding: 25px;
+  padding-bottom: 0;
   background: #f7f2f2;
   transition: .3s;
 }
@@ -751,7 +754,7 @@ body {
   flex-grow: 1;
 }
 
-/* FOOTER */
+/* FOOTER-CSS */
 #footer {
   height: auto;
   color: var(--cor-primaria);
@@ -946,6 +949,14 @@ body {
     margin-bottom: 10px;
   }
 
+  #btn-whatsapp {
+    margin: 10px 0;
+  }
+
+  #btn-whatsapp:hover {
+    margin: 10px 0;
+  }
+
   .foto-faby {
     width: 30%;
   }
@@ -1103,17 +1114,36 @@ body {
 
   /* SOBRE-MOBILE */
 
+  #sobre {
+    height: auto;
+    padding: 2em 2em;
+  }
+
   .conteudo-sobre {
     flex-direction: column;
   }
 
   .bloco1-sobre{
-    width: 95%;
+    width: auto;
+    padding: 30px 0;
+  }
+
+  #curriculo_sobre {
+    margin: 15px auto;
   }
 
   .bloco2-sobre {
-    width: 95%;
+    width: auto;
     margin-left: 0;
+  }
+
+  .bloco2-sobre h2 {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .cards-sobre {
+    width: 95%;
   }
 
   /* FOOTER-MOBILE */
@@ -1152,7 +1182,4 @@ body {
   .autorais {
     padding: 0 30px;
   }
-
-
-
 }
