@@ -494,13 +494,23 @@ body {
   width: 100%;
   transition: .5s ease;
   text-align: center;
-  transform: translateX(-100px);
+  transform: translateX(-15px);
+}
+
+.cards-xp span {
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.cards-xp:hover span {
+  opacity: 1;
 }
 
 .cards-xp:hover .depoimento-autor{
   transform: scale(1.06);
-  transform: translateX(-90px);
+  transform: translateX(-6em);
 }
+
 
 .lermais {
   opacity: 0;
@@ -584,10 +594,16 @@ body {
 /* SOBRE-CSS */
 
 #sobre {
-  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background-color: var(--cor-branco);
   color: var(--cor-primaria);
   padding: 7em 4em;
+  transition: max-height 0.7s ease;
+}
+
+#sobre.expandido {
+  max-height: 3000px;
 }
 
 /* layout geral do sobre */
@@ -610,21 +626,35 @@ body {
   font-size: 30px;
 }
 
-#sobre h2 {
+.bloco1-sobre .conteudo-subtitulo {
   color: var(--cor-primaria);
   font-size: 18px;
   font-weight: 500;
+
+  max-height: 300px;
+  overflow: hidden;
+
+  transition: max-height 0.6s ease;
+  
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+#sobre.expandido .conteudo-subtitulo {
+  max-height: 2000px;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 /* texto e lista do sobre */
 
-#sobre li {
+.conteudo-subtitulo li {
   list-style: none;
   padding-left: 30px;
   line-height: 1.5;
 }
 
-#sobre i {
+.conteudo-subtitulo i {
   color: var(--cor-secundaria);
   font-size: 40px;
   margin-right: 6px;
@@ -658,7 +688,7 @@ body {
   flex-direction: column;
   width: 50%;
   margin-left: 2em;
-  gap: 3em;
+  gap: 1em;
 }
 
 /* cards do sobre */
@@ -677,7 +707,6 @@ body {
   background-color: #fafafa;
   transition: .3s;
 }
-
 
 .tracejado {
   border: 1px solid rgba(180, 130, 58, 0.2);
@@ -719,6 +748,10 @@ body {
   gap: 0.4em;
 }
 
+.icon-e-data i {
+  font-size: 38px;
+}
+
 .agenda-titulo {
   font-size: 30px;
   font-weight: 800;
@@ -746,12 +779,81 @@ body {
   border-radius: 15px;
   padding: 10px 20px;
   font-size: 20px;
-  margin-top: 30px;
+  margin: 25px 0;
 }
 
 .linha-agenda {
   border-top: 1px solid var(--cor-secundaria);
   flex-grow: 1;
+}
+
+/* animação cards sobre */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  padding: 0 5px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Cada slide ocupa 100% da viewport */
+.carousel-track .cards-sobre {
+  flex: 0 0 100%;
+  margin: 20px 0;
+  margin-right: 10px;
+}
+
+/* Botões */
+.carousel-btn {
+  background: none;
+  border: none;
+  color: var(--cor-primaria);
+  font-size: 50px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 6px;
+  transition: opacity .2s ease, transform .15s ease;
+}
+
+.carousel-btn:hover {
+  color: var(--cor-detalhe);
+  transform: scale(1.1);
+}
+
+.botao-palestra {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#botao-palestra a {
+  text-decoration: none;
+  color: var(--cor-branco);
+  font-weight: bold;
+  background-color: var(--cor-secundaria);
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  transition: .3s;
+}
+
+#botao-palestra a:hover {
+  color: var(--cor-primaria);
+  background-color: var(--cor-branco);
+  border: 2px solid var(--cor-primaria);
 }
 
 /* FOOTER-CSS */
@@ -1115,7 +1217,7 @@ body {
   /* SOBRE-MOBILE */
 
   #sobre {
-    height: auto;
+    max-height: max-content;
     padding: 2em 2em;
   }
 
@@ -1145,6 +1247,16 @@ body {
   .cards-sobre {
     width: 95%;
   }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  .carousel-viewport {
+    touch-action: pan-y;
+  }
+
+
 
   /* FOOTER-MOBILE */
 
