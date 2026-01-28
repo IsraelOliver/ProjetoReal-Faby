@@ -229,7 +229,7 @@ body {
 }
 
 .servicos-texto {
-  margin-bottom: 8em;
+  margin-bottom: 2em;
 }
 
 .servicos-titulo {
@@ -293,9 +293,9 @@ body {
 
 .cards {
   width: 400px;
-  height: 200px;
+  height: auto;
   background-color: var(--cor-branco);
-  border-radius: 10px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -303,6 +303,230 @@ body {
   font-size: 20px;
   border: 1px solid #dadbdd;
   box-shadow: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.diagnostico-bloco1 {
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  color: var(--cor-branco);
+  background: var(--cor-degrade);
+}
+
+.diagnostico-bloco1 img {
+  width: 60px;
+}
+
+.diagnostico-bloco1 h2 {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.diagnostico-bloco1 hr {
+  width: 90%;
+  margin: 0 auto;
+  border-color: var(--cor-secundaria);
+}
+
+.diagnostico-bloco1 p {
+  margin: 10px 0;
+}
+
+.diagnostico-bloco2 {
+  padding: 10px 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.diagnostico-bloco2 h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  color: var(--cor-detalhe);
+}
+
+.diagnostico-bloco2 hr {
+  width: 20%;
+  height: 2px;
+  border-color: var(--cor-secundaria);
+}
+
+.diagnostico-bloco2__icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.diagnostico-bloco2 img {
+  width: 90px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.diagnostico-bloco2 a {
+  font-size: 18px;
+  color: var(--cor-branco);
+  padding: 2px 10px;
+  background-color: var(--cor-primaria);
+  border-radius: 15px;
+}
+
+/* Card 2 */
+
+.estrutura-bloco1 {
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  color: var(--cor-branco);
+  background: var(--cor-degrade);
+}
+
+.estrutura-bloco1 img {
+  width: 60px;
+}
+
+.estrutura-bloco1 h2 {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.estrutura-bloco1 hr {
+  width: 90%;
+  margin: 0 auto;
+  border-color: var(--cor-secundaria);
+}
+
+.estrutura-bloco1 p {
+  margin: 10px 0;
+}
+
+.estrutura-bloco2 {
+  padding: 10px 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.estrutura-bloco2 h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  color: var(--cor-detalhe);
+}
+
+.estrutura-bloco2 hr {
+  width: 20%;
+  height: 2px;
+  border-color: var(--cor-secundaria);
+}
+
+.estrutura-bloco2__icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.estrutura-bloco2 img {
+  width: 90px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.estrutura-bloco2 a {
+  font-size: 18px;
+  color: var(--cor-branco);
+  padding: 2px 10px;
+  background-color: var(--cor-primaria);
+  border-radius: 15px;
+}
+
+
+/* Card 3 */
+
+.aceleracao-bloco1 {
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  color: var(--cor-branco);
+  background: var(--cor-degrade);
+}
+
+.aceleracao-bloco1 img {
+  width: 60px;
+}
+
+.aceleracao-bloco1 h2 {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.aceleracao-bloco1 hr {
+  width: 90%;
+  margin: 0 auto;
+  border-color: var(--cor-secundaria);
+}
+
+.aceleracao-bloco1 p {
+  margin: 10px 0;
+}
+
+.aceleracao-bloco2 {
+  padding: 10px 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aceleracao-bloco2 h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  color: var(--cor-detalhe);
+}
+
+.aceleracao-bloco2 hr {
+  width: 20%;
+  height: 2px;
+  border-color: var(--cor-secundaria);
+}
+
+.aceleracao-bloco2__icons {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.aceleracao-bloco2 img {
+  width: 90px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.aceleracao-bloco2 a {
+  font-size: 18px;
+  color: var(--cor-branco);
+  padding: 2px 10px;
+  background-color: var(--cor-primaria);
+  border-radius: 15px;
 }
 
 /* CONTATO-CSS */
