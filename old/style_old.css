@@ -4,109 +4,37 @@
 /* VARIAVEIS */
 
 :root {
-
-  /* =========================
-     PALETA BASE
-     ========================= */
-
-  /* Primária (Azul institucional) */
-  --cor-primaria-900: #0e1e58;
-  --cor-primaria-700: #1b2e73;
-  --cor-primaria-500: #2c3f8e;
-  --cor-primaria-300: #4a5aa8;
-  --cor-primaria-100: #d9def5;
-
-  /* Secundária (Dourado) */
-  --cor-secundaria-900: #b4823a;
-  --cor-secundaria-700: #c7964d;
-  --cor-secundaria-500: #d9aa60;
-  --cor-secundaria-300: #eac68d;
-  --cor-secundaria-100: #f7ecd8;
-
-  /* Detalhe (Vinho) */
-  --cor-detalhe: #87143d;
-
-  /* Neutros */
-  --cor-branco-puro: #ffffff;
+  /* cor */
+  --cor-primaria: #0e1e58;
+  --cor-secundaria: #b4823a;
   --cor-branco: #f9f5f5;
-
-  --cor-cinza-900: #1a1a1a;
-  --cor-cinza-700: #4a4a4a;
-  --cor-cinza-500: #8a8a8a;
-  --cor-cinza-300: #dadbdd;
-  --cor-cinza-100: #f5f5f5;
-
-  /* =========================
-     BACKGROUNDS
-     ========================= */
-
-  --cor-bg-suave: var(--cor-cinza-100);
+  --cor-detalhe: #87143d;
+  --cor-degrade: linear-gradient(90deg, rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
+  --cor-transparent: rgba(255, 255, 255, 0.5);
+  
+  --cor-borda-cinza: #dadbdd;
+  --cor-branco-puro: #ffffff;
+  --cor-bg-suave: #fafafa;
   --cor-bg-card: #f7f2f2;
 
-  /* =========================
-     GRADIENTES
-     ========================= */
-
-  --cor-degrade-principal: linear-gradient(90deg, rgba(16, 35, 55, 1) 0%, rgba(48, 76, 104, 1) 100%);
-  --cor-degrade-primaria-soft: linear-gradient(90deg, #0e1e58 0%, #2c3f8e 100%);
-  --cor-degrade-secundario: linear-gradient(90deg, #b4823a 0%, #d9aa60 100%);
-
-  /* =========================
-     OPACIDADES
-     ========================= */
-
-  --cor-secundaria-55: rgba(180, 130, 58, 0.55);
-  --cor-secundaria-20: rgba(180, 130, 58, 0.2);
-
-  --cor-overlay-leve: rgba(0, 0, 0, 0.35);
   --cor-overlay: rgba(0, 0, 0, 0.55);
-  --cor-overlay-intenso: rgba(0, 0, 0, 0.75);
-
-  --cor-transparent: rgba(255, 255, 255, 0.5);
-
-  /* =========================
-     ESTADOS UI
-     ========================= */
-
-  --cor-sucesso: #2e7d32;
-  --cor-erro: #c62828;
-  --cor-alerta: #f9a825;
-  --cor-info: #1565c0;
-
-  /* =========================
-     SOMBRAS
-     ========================= */
-
   --sombra-card: 0px 3px 8px 1px rgba(0, 0, 0, 0.12);
   --sombra-card-leve: 0px 3px 3px 1px rgba(0, 0, 0, 0.1);
   --sombra-img: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
   --sombra-modal: 0 20px 60px rgba(0, 0, 0, 0.35);
 
-  /* =========================
-     BORDAS
-     ========================= */
-
-  --cor-borda-cinza: var(--cor-cinza-300);
   --cor-linha-modal: #e7e7e7;
 
-  /* =========================
-     OUTROS
-     ========================= */
+  --cor-secundaria-55: rgba(180, 130, 58, 0.55);
+  --cor-secundaria-20: rgba(180, 130, 58, 0.2);
 
   --mask-fade: linear-gradient(to bottom, black 70%, transparent 100%);
 
-  /* Fontes */
+  /* fontes */
   --fonte-titulo: 'Poppins', sans-serif;
   --font-texto: 'Lato', sans-serif;
-
-  /* =========================
-     COMPAT (mantém o CSS atual funcionando)
-     ========================= */
-
-  --cor-primaria: var(--cor-primaria-900);
-  --cor-secundaria: var(--cor-secundaria-900);
-  --cor-degrade: var(--cor-degrade-principal);
 }
+
 /* RESET */
 
 * {
@@ -162,18 +90,18 @@ body {
 }
 
 .link-text:hover {
-  color: var(--cor-secundaria-500);
+  color: var(--cor-secundaria);
 }
 
 #link-text-contato {
-  border: 2px solid var(--cor-secundaria-700);
+  border: 2px solid var(--cor-secundaria);
   padding: 5px 15px;
   border-radius: 10px;
   transition: .2s;
 }
 
 #link-text-contato:hover {
-  background-color: var(--cor-secundaria-700);
+  background-color: var(--cor-secundaria);
   color: var(--cor-branco);
 }
 
@@ -247,7 +175,7 @@ body {
 }
 
 .titulo-destaque {
-  color: var(--cor-secundaria-500);
+  color: var(--cor-secundaria);
   font-weight: 750;
   font-size: 50px;
 }
@@ -267,8 +195,8 @@ body {
 }
 
 #btn-whatsapp {
-  border: 2px solid var(--cor-secundaria-900);
-  background-color: var(--cor-secundaria-900);
+  border: 2px solid var(--cor-secundaria);
+  background-color: var(--cor-secundaria);
   transition: .2s;
   margin: 20px 0;
 }
@@ -354,7 +282,7 @@ body {
 .conteudo-info i {
   padding-right: 10px;
   font-size: 20px;
-  color: var(--cor-secundaria-700);
+  color: var(--cor-secundaria);
 }
 
 .conteudo-info a {
@@ -649,7 +577,7 @@ body {
 }
 
 #btn-whatsapp_contato {
-  background-color: var(--cor-secundaria-900);
+  background-color: var(--cor-secundaria);
   transition: .2s;
 }
 
@@ -718,7 +646,7 @@ body {
 }
 
 .form-group button:hover {
-  background-color: var(--cor-secundaria-700);
+  background-color: var(--cor-secundaria);
 }
 
 /* DEPOIMENTO-CSS */
@@ -787,7 +715,7 @@ body {
 
 .testimonial-card i{
   font-size: 30px;
-  color: var(--cor-secundaria-700);
+  color: var(--cor-secundaria);
   margin-bottom: 12px;
 }
 
@@ -809,7 +737,7 @@ body {
 }
 
 .t-stars{
-  color: var(--cor-secundaria-700);
+  color: var(--cor-secundaria);
   text-align: center;
   font-size: 22px;
   margin: 12px 0 10px;
@@ -971,7 +899,7 @@ body {
 }
 
 .conteudo-subtitulo i {
-  color: var(--cor-secundaria-700);
+  color: var(--cor-secundaria);
   font-size: 40px;
   margin-right: 6px;
 }
@@ -1281,7 +1209,7 @@ body {
 
 #btn-whatsapp_footer {
   display: inline-flex;
-  background-color: var(--cor-secundaria-900);
+  background-color: var(--cor-secundaria);
   transition: .2s;
   margin: 20px 0;
 }
@@ -1315,7 +1243,7 @@ body {
 }
 
 .redes-sociais i {
-  color: var(--cor-secundaria-700);
+  color: var(--cor-secundaria);
   font-size: 20px;
   margin-right: 10px;
 }

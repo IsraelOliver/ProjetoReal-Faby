@@ -262,6 +262,7 @@ if (track && viewport) {
   }, { passive: true });
 }
 
+
 (() => {
   const carousel = document.getElementById("tCarousel");
   if (!carousel) return;
