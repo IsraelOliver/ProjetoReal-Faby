@@ -648,16 +648,6 @@ body {
   margin-right: 10px;
 }
 
-#btn-whatsapp_contato {
-  background-color: var(--cor-secundaria-900);
-  transition: .2s;
-}
-
-#btn-whatsapp_contato:hover {
-  color: var(--cor-primaria);
-  background-color: var(--cor-branco);
-}
-
 .mobile-info {
   display: none;
 }
