@@ -5,14 +5,15 @@ if (toggle && menu) {
   toggle.setAttribute('role', 'button');
   toggle.setAttribute('tabindex', '0');
   toggle.setAttribute('aria-expanded', 'false');
-
   const openMenu = () => {
     menu.classList.add('active');
+    document.body.classList.add('menu-open');
     toggle.setAttribute('aria-expanded', 'true');
   };
 
   const closeMenu = () => {
     menu.classList.remove('active');
+    document.body.classList.remove('menu-open');
     toggle.setAttribute('aria-expanded', 'false');
   };
 
@@ -49,7 +50,6 @@ if (toggle && menu) {
   });
 }
 
-// ====== VER MAIS (EXPANDIR/RECOLHER SOBRE) ======
 const btnVerMais = document.getElementById("verMais_sobre");
 const sobre = document.getElementById("sobre");
 
@@ -73,8 +73,6 @@ if (btnVerMais && sobre) {
   });
 }
 
-
-// ====== MODAL CURRÍCULO (PDF) ======
 const btnCurriculo = document.getElementById("curriculo_pdf");
 const modal = document.getElementById("modalCurriculo");
 
@@ -98,7 +96,6 @@ if (btnCurriculo && modal) {
     openModal();
   });
 
-  // Fecha clicando no backdrop ou no X
   modal.addEventListener("click", (e) => {
     const target = e.target;
     if (target && target.dataset && target.dataset.close === "true") {
@@ -106,7 +103,6 @@ if (btnCurriculo && modal) {
     }
   });
 
-  // Fecha com ESC
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
@@ -409,3 +405,79 @@ if (track && viewport) {
 
   render();
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".header-links .link-text");
+  const sections = document.querySelectorAll("section, footer, main > section");
+
+  const highlightMenu = () => {
+    let scrollPos = window.scrollY || document.documentElement.scrollTop;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        links.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+
+    if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight - 10) {
+      links.forEach((link) => link.classList.remove("active"));
+      const lastLink = document.querySelector('#link-text-contato');
+      if (lastLink) lastLink.classList.add("active");
+    }
+  };
+
+  window.addEventListener("scroll", highlightMenu);
+  highlightMenu();
+});
+
+
+const formContato = document.getElementById("contatoForm");
+const formStatus = document.getElementById("formStatus");
+const btnSubmit = document.getElementById("btnSubmit");
+
+if (formContato) {
+  formContato.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const btnOriginalText = btnSubmit.textContent;
+    btnSubmit.textContent = "Enviando...";
+    btnSubmit.disabled = true;
+    formStatus.textContent = "";
+
+    const formData = new FormData(formContato);
+
+    try {
+      const response = await fetch(formContato.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        formStatus.textContent = "Obrigado! Sua mensagem foi enviada com sucesso.";
+        formStatus.className = "form-success";
+        formContato.reset();
+      } else {
+        formStatus.textContent = "Oops! Houve um problema ao enviar, tente novamente.";
+        formStatus.className = "form-error";
+      }
+    } catch (error) {
+      formStatus.textContent = "Oops! Verifique sua conexão e tente novamente.";
+      formStatus.className = "form-error";
+    }
+
+    btnSubmit.textContent = btnOriginalText;
+    btnSubmit.disabled = false;
+  });
+}
