@@ -1128,6 +1128,11 @@ body {
   background-color: var(--cor-cinza-100);
 }
 
+.curriculo-content h2 {
+  text-align: left;
+  margin: 12px;
+}
+
 .curriculo-content ul {
   margin: 10px 0;
   margin-left: 15px;
@@ -1139,11 +1144,26 @@ body {
   color: var(--cor-cinza-900);
   list-style: none;
   text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
 }
 
 .curriculo-content i {
   color: var(--cor-secundaria-900);
   margin-right: 5px;
+  margin-top: 3px;
+}
+
+.curriculo-content a {
+  color: var(--cor-primaria-900);
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.curriculo-content a:hover {
+  color: var(--cor-detalhe);
 }
 
 .linha-sobre {
@@ -1865,6 +1885,19 @@ body {
 
   #curriculo_sobre {
     margin: 15px auto;
+  }
+
+  .modal-content {
+    height: min(600px);
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .curriculo-content h2 {
+    text-align: left;
   }
 
   .bloco2-sobre {
