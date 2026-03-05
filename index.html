@@ -132,63 +132,79 @@
           </div>
         </div>
 
-        <div class="conteudo-cards">
-          <div class="cards">
-            <div class="diagnostico-bloco1">
-              <h2><img src="./src/estetoscópio.png" alt="Ícone Estetoscópio" loading="lazy" />Diagnóstico & Direção</h2>
-              <hr>
-              <p>Análise detalhada com<br>plano de ação claro.</p>
-            </div>
-            <div class="diagnostico-bloco2">
-              <h3>
-                <hr>Recomendações para você
-                <hr>
-              </h3>
-              <div class="diagnostico-bloco2__icons">
-                <img src="./src/diagnostico.png" alt="Ícone Diagnóstico" loading="lazy" />
-                <img src="./src/minicurso.png" alt="Ícone Minicurso" loading="lazy" />
-                <img src="./src/consultoria.png" alt="Ícone Consultoria" loading="lazy" />
+        <div class="carousel mobile-carousel" id="carousel-servicos">
+          <div class="carousel-viewport">
+            <div class="carousel-track conteudo-cards">
+              <div class="cards">
+                <div class="diagnostico-bloco1">
+                  <h2><img src="./src/estetoscópio.png" alt="Ícone Estetoscópio" loading="lazy" />Diagnóstico & Direção
+                  </h2>
+                  <hr>
+                  <p>Análise detalhada com<br>plano de ação claro.</p>
+                </div>
+                <div class="diagnostico-bloco2">
+                  <h3>
+                    <hr>Recomendações para você
+                    <hr>
+                  </h3>
+                  <div class="diagnostico-bloco2__icons">
+                    <img src="./src/diagnostico.png" alt="Ícone Diagnóstico" loading="lazy" />
+                    <img src="./src/minicurso.png" alt="Ícone Minicurso" loading="lazy" />
+                    <img src="./src/consultoria.png" alt="Ícone Consultoria" loading="lazy" />
+                  </div>
+                  <a>Ver detalhes</a>
+                </div>
               </div>
-              <a>Ver detalhes</a>
+
+              <div class="cards">
+                <div class="estrutura-bloco1">
+                  <h2><img src="./src/grafico.png" alt="Ícone Gráfico" loading="lazy" />Estruturação & Liderança</h2>
+                  <hr>
+                  <p>Metodologia FCV<sup>®</sup> para<br>estruturar e gerir sua equipe.</p>
+                </div>
+                <div class="estrutura-bloco2">
+                  <h3>
+                    <hr>Recomendações para você
+                    <hr>
+                  </h3>
+                  <div class="estrutura-bloco2__icons">
+                    <img src="./src/oficina.png" alt="Ícone Oficina" loading="lazy" />
+                    <img src="./src/equipe.png" alt="Ícone Equipe" loading="lazy" />
+                    <img src="./src/consultoria.png" alt="Ícone Consultoria" loading="lazy" />
+                  </div>
+                  <a>Ver detalhes</a>
+                </div>
+              </div>
+
+              <div class="cards">
+                <div class="aceleracao-bloco1">
+                  <h2><img src="./src/engrenagem.png" alt="Ícone Engrenagem" loading="lazy" />Aceleração & Escala</h2>
+                  <hr>
+                  <p>Soluções sob medida para<br>os desafios da sua clínica.</p>
+                </div>
+                <div class="aceleracao-bloco2">
+                  <h3>
+                    <hr>Recomendações para você
+                    <hr>
+                  </h3>
+                  <div class="aceleracao-bloco2__icons">
+                    <img src="./src/consultoria.png" alt="Ícone Consultoria" loading="lazy" />
+                  </div>
+                  <a>Ver detalhes</a>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="cards">
-            <div class="estrutura-bloco1">
-              <h2><img src="./src/grafico.png" alt="Ícone Gráfico" loading="lazy" />Estruturação & Liderança</h2>
-              <hr>
-              <p>Metodologia FCV® para<br>estruturar e gerir sua equipe.</p>
+          <div class="carousel-controls">
+            <button class="carousel-btn prev" type="button" aria-label="Slide anterior"><i
+                class="fa-solid fa-angle-left"></i></button>
+            <div class="carousel-dots">
+              <button class="dot active" aria-label="Slide 1"></button>
+              <button class="dot" aria-label="Slide 2"></button>
+              <button class="dot" aria-label="Slide 3"></button>
             </div>
-            <div class="estrutura-bloco2">
-              <h3>
-                <hr>Recomendações para você
-                <hr>
-              </h3>
-              <div class="estrutura-bloco2__icons">
-                <img src="./src/oficina.png" alt="Ícone Oficina" loading="lazy" />
-                <img src="./src/equipe.png" alt="Ícone Equipe" loading="lazy" />
-                <img src="./src/consultoria.png" alt="Ícone Consultoria" loading="lazy" />
-              </div>
-              <a>Ver detalhes</a>
-            </div>
-          </div>
-
-          <div class="cards">
-            <div class="aceleracao-bloco1">
-              <h2><img src="./src/engrenagem.png" alt="Ícone Engrenagem" loading="lazy" />Aceleração & Escala</h2>
-              <hr>
-              <p>Soluções sob medida para<br>os desafios da sua clínica.</p>
-            </div>
-            <div class="aceleracao-bloco2">
-              <h3>
-                <hr>Recomendações para você
-                <hr>
-              </h3>
-              <div class="aceleracao-bloco2__icons">
-                <img src="./src/consultoria.png" alt="Ícone Consultoria" loading="lazy" />
-              </div>
-              <a>Ver detalhes</a>
-            </div>
+            <button class="carousel-btn next" type="button" aria-label="Próximo slide"><i
+                class="fa-solid fa-angle-right"></i></button>
           </div>
         </div>
       </div>
@@ -214,7 +230,7 @@
             </div>
           </div>
 
-          <p class="mobile-info">Ou mande uma mensagem diretamente para o meu E-mail:</p>
+          <p class="mobile-info">Mande uma mensagem diretamente para o meu e-mail:</p>
 
           <form class="formulario" id="contatoForm" action="https://formsubmit.co/fcv.instituto@gmail.com"
             method="POST">
@@ -260,12 +276,97 @@
               <article class="testimonial-card">
                 <i class="fa-solid fa-quote-left"></i>
                 <p class="t-snippet">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet facilisis etiam…
+                  É difícil colocar em palavras o quanto o processo de mentoria me modificou, mas foi um divisor de
+                  águas na minha vida…
                 </p>
-                <h2 class="t-author"><span>—</span> Eliane</h2>
+                <h2 class="t-author"><span>—</span> </h2>
+                <h2 class="t-author-enterprise"></h2>
                 <p class="t-stars">★ ★ ★ ★ ★</p>
-                <button class="t-more" type="button" data-title="Eliane"
-                  data-full="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at lacus ac justo dignissim ultrices. Vivamus luctus, sem non bibendum tempor, magna mauris fermentum mauris, a consequat dolor risus sed nibh. Integer viverra, velit at aliquam iaculis, lorem urna volutpat justo, nec ultrices mi odio quis ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.">
+                <button class="t-more" type="button" data-title=""
+                  data-full="É difícil colocar em palavras o quanto o processo de mentoria me modificou, mas acredito que é possível dizer que foi um divisor de águas na minha vida, tanto profissional quanto pessoal. Desde o início da minha supervisão, minha grande barreira sempre foi minha insegurança: para me comunicar com pessoas que eu não tinha uma relação próxima, me colocar como destaque, assumir responsabilidades, me permitir ser eu mesma.
+lineB
+Foi um processo bem difícil no começo, me sentir exposta e vulnerável, mas o resultado após todos esses meses é muito satisfatório. Hoje me sinto mais confortável entre meus colegas, mais segura para tomar decisões, compartilhar ideias, assumir projetos e ser mais proativa.
+lineB
+Aprendi a me organizar melhor, identificar prioridades e colocar minhas necessidades pessoais à frente quando necessário. Isso tirou um peso das minhas costas e diminuiu minha ansiedade.
+lineB
+Na vida pessoal também sinto influência positiva: estou mais calma, mais leve e mais espontânea. Muito obrigada Fabi, suas palavras e cuidado foram fundamentais.">
+                  Ler mais
+                </button>
+              </article>
+
+              <!-- 2 - Mantido igual -->
+              <article class="testimonial-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="t-snippet">
+                  A consultoria da Fabiane foi transformadora para a Tearis. Tínhamos uma prática clínica sólida, mas
+                  precisávamos de organização e...
+                </p>
+                <h2 class="t-author"><span>—</span> Júlia, Flávia e Mariana</h2>
+                <h2 class="t-author-enterprise">Tearis Fisioterapia</h2>
+                <p class="t-stars">★ ★ ★ ★ ★</p>
+                <button class="t-more" type="button" data-title="Júlia, Flávia e Mariana"
+                  data-full="A consultoria da Fabiane foi transformadora para a Tearis... (mantido como você enviou)">
+                  Ler mais
+                </button>
+              </article>
+
+              <!-- 3 -->
+              <article class="testimonial-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="t-snippet">
+                  A mentoria tem sido muito importante para mim tanto no aspecto profissional quanto pessoal…
+                </p>
+                <h2 class="t-author"><span>—</span> </h2>
+                <h2 class="t-author-enterprise"></h2>
+                <p class="t-stars">★ ★ ★ ★ ★</p>
+                <button class="t-more" type="button" data-title="" data-full="A mentoria está sendo muito importante para mim tanto no aspecto profissional como pessoal.
+lineB
+No profissional, tem me ajudado a estabelecer metas concretas e prazos claros, sempre pensando em um objetivo maior e passando esse pensamento para os liderados.
+lineB
+Um ponto que ainda quero desenvolver é como dar feedbacks negativos. Estou aprendendo o contexto de como fazer, mas ainda é um desafio encontrar as palavras certas para não desestimular.
+lineB
+Acredito que esse processo tem sido essencial para meu crescimento.">
+                  Ler mais
+                </button>
+              </article>
+
+              <!-- 4 -->
+              <article class="testimonial-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="t-snippet">
+                  Quando fui convidada para a supervisão, nunca me senti apta para o cargo…
+                </p>
+                <h2 class="t-author"><span>—</span> </h2>
+                <h2 class="t-author-enterprise"></h2>
+                <p class="t-stars">★ ★ ★ ★ ★</p>
+                <button class="t-more" type="button" data-title="" data-full="Quando fui convidada para fazer parte da supervisão, nunca me senti apta para o cargo por experiências ruins anteriores.
+lineB
+A mentoria veio para me auxiliar a me reencontrar como profissional e como pessoa.
+lineB
+Tenho desenvolvido aspectos da minha vida que contribuirão para que eu seja a líder que espero ser. Hoje vejo a liderança como parte de um propósito maior.
+lineB
+Sou muito grata pela trajetória, aprendizados e estou disposta a aprender muito mais. Obrigada Fabi!">
+                  Ler mais
+                </button>
+              </article>
+
+              <!-- 5 -->
+              <article class="testimonial-card">
+                <i class="fa-solid fa-quote-left"></i>
+                <p class="t-snippet">
+                  O processo de mentoria tem sido muito enriquecedor para mim…
+                </p>
+                <h2 class="t-author"><span>—</span> </h2>
+                <h2 class="t-author-enterprise"></h2>
+                <p class="t-stars">★ ★ ★ ★ ★</p>
+                <button class="t-more" type="button" data-title=""
+                  data-full="O processo de mentoria tem sido muito enriquecedor para mim, com crescimento profissional e pessoal.
+lineB
+Tenho descoberto habilidades e reconhecido pontos de melhoria.
+lineB
+Na supervisão, passei a olhar com mais empatia para o time, reconhecendo potencialidades e julgando menos.
+lineB
+Desenvolvi uma postura mais confiante e assertiva, aprendendo a comunicar com clareza, dar feedbacks construtivos e equilibrar cobrança com acolhimento.">
                   Ler mais
                 </button>
               </article>
@@ -273,38 +374,22 @@
               <article class="testimonial-card">
                 <i class="fa-solid fa-quote-left"></i>
                 <p class="t-snippet">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere…
+                  O processo de mentoria tem me trazido desenvolvimento profissional e pessoal. No início foi difícil
+                  sair da minha zona de conforto, mas hoje percebo…
                 </p>
-                <h2 class="t-author"><span>—</span> Eduardo</h2>
+                <h2 class="t-author"><span>—</span> </h2>
+                <h2 class="t-author-enterprise"></h2>
                 <p class="t-stars">★ ★ ★ ★ ★</p>
-                <button class="t-more" type="button" data-title="Eduardo"
-                  data-full="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Duis eget lectus sed turpis vestibulum feugiat. Cras vel elit sed risus tincidunt bibendum. Morbi euismod, augue non porta laoreet, ligula nisl viverra purus, at dignissim sem justo in magna. Nam eget neque nec tortor porta pretium.">
-                  Ler mais
-                </button>
-              </article>
-
-              <article class="testimonial-card">
-                <i class="fa-solid fa-quote-left"></i>
-                <p class="t-snippet">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum…
-                </p>
-                <h2 class="t-author"><span>—</span> TechToSmiles</h2>
-                <p class="t-stars">★ ★ ★ ★ ★</p>
-                <button class="t-more" type="button" data-title="TechToSmiles"
-                  data-full="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Donec quis elit ac arcu ultrices condimentum. Sed a felis non ipsum euismod sagittis. Praesent non massa nec eros pharetra consequat. Nulla facilisi.">
-                  Ler mais
-                </button>
-              </article>
-
-              <article class="testimonial-card">
-                <i class="fa-solid fa-quote-left"></i>
-                <p class="t-snippet">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum…
-                </p>
-                <h2 class="t-author"><span>—</span> Israel</h2>
-                <p class="t-stars">★ ★ ★ ★ ★</p>
-                <button class="t-more" type="button" data-title="Israel"
-                  data-full="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Donec quis elit ac arcu ultrices condimentum. Sed a felis non ipsum euismod sagittis. Praesent non massa nec eros pharetra consequat. Nulla facilisi.">
+                <button class="t-more" type="button" data-title=""
+                  data-full="O processo de mentoria tem me trazido desenvolvimento profissional e pessoal.
+lineB
+No início foi um pouco mais difícil sair da minha zona de conforto e enfrentar os pontos que eu preciso desenvolver, porque não estava otimista no quanto eu poderia progredir.
+lineB
+Hoje percebo que posso trabalhar em cima das minhas dificuldades para que elas não me atrapalhem, mesmo sabendo que elas sempre estarão ali de alguma forma, pois sou um ser humano e atingir a perfeição não é possível. Mas, para cada problema há uma solução.
+lineB
+Sair da zona de conforto em relação à minha forma de liderar não é confortável, mas é algo que precisa acontecer sempre.
+lineB
+A palavra que define como me sinto agora é DESENVOLVIMENTO, no gerúndio, pois demonstra algo que está acontecendo, que vai continuar e que com certeza trará resultados, dos quais eu não serei a única beneficiada.">
                   Ler mais
                 </button>
               </article>
@@ -313,6 +398,19 @@
           </div>
 
           <button class="t-btn next" type="button" aria-label="Próximo depoimento">›</button>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn prev-mobile" type="button" aria-label="Depoimento anterior"><i
+                class="fa-solid fa-angle-left"></i></button>
+            <div class="carousel-dots">
+              <button class="dot active" aria-label="Slide 1"></button>
+              <button class="dot" aria-label="Slide 2"></button>
+              <button class="dot" aria-label="Slide 3"></button>
+              <button class="dot" aria-label="Slide 4"></button>
+            </div>
+            <button class="carousel-btn next-mobile" type="button" aria-label="Próximo depoimento"><i
+                class="fa-solid fa-angle-right"></i></button>
+          </div>
         </div>
 
         <hr>
@@ -351,7 +449,7 @@
             </div>
           </div>
 
-          <img class="foto-ebook" src="./src/ebook.png" alt="Capa do E-book gratuito para líderes de saúde"
+          <img class="foto-ebook" src="./src/capa_e-book_7_sol.png" alt="Capa do E-book gratuito para líderes de saúde"
             loading="lazy">
         </div>
       </div>
@@ -402,8 +500,7 @@
               </div>
 
               <div class="modal-body">
-                <iframe id="curriculoFrame" src="#"
-                  title="Currículo da Fabiane Vaz" loading="lazy">
+                <iframe id="curriculoFrame" src="#" title="Currículo da Fabiane Vaz" loading="lazy">
                 </iframe>
               </div>
             </div>
@@ -487,6 +584,18 @@
             </div>
 
             <button class="carousel-btn next">›</button>
+
+            <div class="carousel-controls">
+              <button class="carousel-btn prev-mobile" type="button" aria-label="Slide anterior"><i
+                  class="fa-solid fa-angle-left"></i></button>
+              <div class="carousel-dots">
+                <button class="dot active" aria-label="Slide 1"></button>
+                <button class="dot" aria-label="Slide 2"></button>
+                <button class="dot" aria-label="Slide 3"></button>
+              </div>
+              <button class="carousel-btn next-mobile" type="button" aria-label="Próximo slide"><i
+                  class="fa-solid fa-angle-right"></i></button>
+            </div>
           </div>
 
           <div class="botao-palestra" id="botao-palestra">
@@ -522,10 +631,11 @@
     </div>
 
     <hr class="linha-footer">
-    <p class="autorais">Fabiane Vaz – Consultoria em Saúde e Liderança<sup>©</sup> 2025-2026 Todos os direitos
-      reservados <a href="./links/linketree.html">o</a></p>
+    <p class="autorais">Fabiane Vaz – Consultoria em Gestão e Liderança para Empresas de Saúde <a
+        href="./links/linketree.html"><sup>©</sup></a> 2025-2026. Todos os direitos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
