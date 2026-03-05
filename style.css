@@ -668,7 +668,6 @@ body {
 
 #contato .conteudo-selos {
   margin-bottom: 3.5em;
-  /* creates a comfortable breath before the form */
   gap: 15px;
 }
 
@@ -955,7 +954,7 @@ body {
   background-color: var(--cor-secundaria);
   border-radius: 15px;
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 30px;
   margin: 0 auto;
 }
 
@@ -1063,9 +1062,9 @@ body {
 .modal-content {
   position: relative;
   width: min(1000px, 92vw);
-  height: min(720px, 86vh);
+  height: min(700px, 92vw);
   background: var(--cor-branco-puro);
-  margin: 6vh auto;
+  margin: 2vh auto;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--sombra-modal);
@@ -1077,14 +1076,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--cor-linha-modal);
+  padding: 20px 20px 10px;
 }
 
 .modal-header h2 {
   font-family: var(--fonte-titulo);
-  font-size: 18px;
+  font-size: 30px;
   color: var(--cor-primaria);
+  margin-left: 30px;
 }
 
 .modal-close {
@@ -1094,17 +1093,57 @@ body {
   line-height: 1;
   cursor: pointer;
   color: var(--cor-primaria);
-  padding: 6px 10px;
+  padding: 6px 30px;
+}
+
+.modal-content hr {
+  width: 90%;
+  border: none;
+  background: var(--cor-alerta);
+  height: 2px;
+  margin: 0 auto;
 }
 
 .modal-body {
   flex: 1;
+  flex-grow: 1;
+  overflow-y: scroll;
+  text-align: center;
+  padding: 20px 0;
 }
 
-.modal-body iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
+.curriculo-latters {
+  text-decoration: none;
+  color: var(--cor-detalhe);
+  text-align: center;
+  font-weight: 700;
+}
+
+.curriculo-content {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px 20px;
+  border-left: 4px solid var(--cor-alerta);
+  border-radius: 15px;
+  background-color: var(--cor-cinza-100);
+}
+
+.curriculo-content ul {
+  margin: 10px 0;
+  margin-left: 15px;
+}
+
+.curriculo-content li {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: var(--cor-cinza-900);
+  list-style: none;
+  text-align: left;
+}
+
+.curriculo-content i {
+  color: var(--cor-secundaria-900);
+  margin-right: 5px;
 }
 
 .linha-sobre {
@@ -1385,6 +1424,11 @@ body {
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.linketree {
+  text-decoration: none;
+  color: var(--cor-branco);
 }
 
 /* =========================
@@ -1800,7 +1844,7 @@ body {
   }
 
   #ebook a {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   /* SOBRE-MOBILE */
